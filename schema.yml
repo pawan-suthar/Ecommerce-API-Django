@@ -1,0 +1,54 @@
+openapi: 3.0.3
+info:
+  title: DRF Ecom Api
+  version: 1.0.0
+  description: Ecom application
+paths:
+  /api/brand//:
+    get:
+      operationId: api_brand_retrieve
+      description: view set for Brand list
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/category//:
+    get:
+      operationId: api_category_retrieve
+      description: view set for category list
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/product//:
+    get:
+      operationId: api_product_retrieve
+      description: view set for product list
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
